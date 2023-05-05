@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: test-mvp-component-mhxw
+  namespace: mvp-demo-dev-namespace-gtcb-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: var_name
+          value: test
+        image: quay.io/redhat-appstudio-qe/test-images@sha256:889b17da71ffd79abea684933a9dd0ca8bb960e4404136a97a0ef00103249fd7
+        name: container-image
+        resources: {}
+status: {}
